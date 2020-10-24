@@ -11,6 +11,7 @@ public class Input {
 
 	private List<List<String>> packs;
 	private HashMap<String, ArrayList<String>> attributes;
+	private HashMap<String, ArrayList<String>> attrValues;
 
 	private String lineSplitter;
 	public Input setInputStr(String inputStr) {
@@ -28,24 +29,27 @@ public class Input {
 	public Input createAttr() {
 		
 		attributes = new HashMap<>();
-		
+		attrValues = new HashMap<>();
 		for (List<String> nodePack : packs) {
-			String currentNodeName = getNodeName(nodePack.get(0),"TEXT=\"");
+			String currentNodeName = getLineValue(nodePack.get(0),"TEXT=\"");
 			for (String lineInPack : nodePack) {
 				if(!lineInPack.contains("<attribute")) continue;
-				String currentAttribute = getNodeName(lineInPack, "NAME=\"");
+				String currentAttribute = getLineValue(lineInPack, "NAME=\"");
+				String currentAttrValue = getLineValue(lineInPack, "VALUE=\"");
 				
 				if (!attributes.containsKey(currentAttribute)) attributes.put(currentAttribute, new ArrayList<>());
 				if (!attributes.get(currentAttribute).contains(currentNodeName)) attributes.get(currentAttribute).add(currentNodeName);
 				
+				if (!attrValues.containsKey(currentAttribute)) attrValues.put(currentAttribute, new ArrayList<>());
+				if (!attrValues.get(currentAttribute).contains(currentAttrValue)) attrValues.get(currentAttribute).add(currentAttrValue);
 			}
 		}
 		return this;
 	}
 	 
-	private String getNodeName(String stringLine,String startKey) {
+	private String getLineValue(String stringLine,String startKey) {
 		int startIndex = stringLine.indexOf(startKey);
-		int endIndex = stringLine.indexOf("\"", startIndex+startKey.length()+1);
+		int endIndex = stringLine.indexOf("\"", startIndex+startKey.length());
 		return stringLine.substring(startIndex+startKey.length(), endIndex);
 	}
 
@@ -107,7 +111,16 @@ public class Input {
 		
 		return result;
 	}
-
+	public String getValAttrList() {
+		String result = "";
+		for(String attr : attrValues.keySet()) {
+			for(String val:attrValues.get(attr)) {
+				result =  result+attr+","+ val+System.lineSeparator();
+			}
+		}
+	
+		return result;
+	}
 	public String getNodeAttrList() {
 		String result = "";
 		for(String attr : attributes.keySet()) {

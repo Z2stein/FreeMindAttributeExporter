@@ -10,6 +10,7 @@ public class Main {
 				 String result	=input.getResultString();
 		MyFileWriter.writeFile("attributesSorted.txt", result);
 		MyFileWriter.writeFile("nodeAndAttrs.txt", input.getNodeAttrList());
+		MyFileWriter.writeFile("AttrAndVals.txt", input.getValAttrList());
 		System.out.println(
 				input.getNodeAttrList()
 				);
