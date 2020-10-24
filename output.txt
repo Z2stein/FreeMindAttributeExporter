@@ -1,0 +1,132 @@
+CharInteraction
+   Kommunikation
+   Handel
+   Reden
+   Manipulieren
+Action
+   Bewegen
+   Gehen
+   Laufen
+   Fallen
+   Fliegen
+   Springen
+   CharBasic
+   Sterben
+   Schaden erleiden
+   Heal
+   Reisen
+   Karren
+   TransportZauber
+   FIghtAction
+   Beat
+   Konter
+   TryLuckyHit
+   ExitFight and Run
+   Weglaufen
+   CharHumanoidBasic
+   GetON
+   TalkTo
+   Order
+   Haggle
+   Offend
+   GetAlly
+   LoseAlly
+Buildings
+   Objekte
+   Haus
+   WOhnhaus
+   Haendler
+   Schmied
+   Gemischt
+   Lebensmittel
+   Regierungshaus
+Materials
+   Build/Craft
+   Materials
+   Steine
+   Holz
+World
+   My Game
+   Welt
+   aenderung
+   Gehzeiten
+   Witterung
+craftable
+   Objekte
+   Haus
+   Kiste
+   create Building
+   create Item
+mineable
+   Build/Craft
+   Materials
+   Steine
+   Holz
+Item
+   Inventar
+   ItenArten
+   Ausruestung
+   Waffen
+   Schmuck
+   nahrung
+   Wertsachen
+   Historische Relikte
+   Traenke
+   Schriftrollen
+   Buecher
+   Muell
+   Tools
+Usable
+   nahrung
+   Traenke
+   Schriftrollen
+Mineable
+   Baum
+   Stein
+WorldInteraction
+   WeltObjecte
+   Untersuchen
+   aufmachen/entnehmen
+   zerstoeren
+   anzuenden
+   zerschlagen
+LandscapeType
+   Gelaende
+   Wasser
+   Sumpf
+   Wald
+   Parie
+   wueste
+   Attribute
+   MapCreator
+   Feuchtigkeit
+   Breitengrad
+   Felsigkeit
+   Hoehe
+   Resulting
+   Flora
+   Fauna
+   PopulationDensity
+Equipable
+   Inventar
+   ItenArten
+   Ausruestung
+   Waffen
+   Schmuck
+   Tools
+   Fernwaffen
+   Nahkampfwaffen
+   Hybride
+   Helm
+   Brust
+   Beine
+   Schuhe
+   Armschinen
+   Ringe
+   Ketten
+WorldObjects
+   Objekte
+   Haus
+   Kiste
+   Baum
+   Stein
