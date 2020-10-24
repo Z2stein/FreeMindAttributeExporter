@@ -6,9 +6,12 @@ public class Main {
 			inp = MyFileReader.getStringFromFile("C:/Users/Chris/Downloads/My Game.mm");
 		else
 			inp = MyFileReader.getStringFromFile(args[0]);
-		String result = new Input().setLineSplitter("\\n").setInputStr(inp).splitString().packStrings().createAttr()
-				.getResultString();
-		MyFileWriter.writeFile("output.txt", result);
-		System.out.println(result);
+		Input input = new Input().setLineSplitter("\\n").setInputStr(inp).splitString().packStrings().createAttr();
+				 String result	=input.getResultString();
+		MyFileWriter.writeFile("attributesSorted.txt", result);
+		MyFileWriter.writeFile("nodeAndAttrs.txt", input.getNodeAttrList());
+		System.out.println(
+				input.getNodeAttrList()
+				);
 	}
 }

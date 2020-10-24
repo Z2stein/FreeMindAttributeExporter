@@ -107,4 +107,16 @@ public class Input {
 		
 		return result;
 	}
+
+	public String getNodeAttrList() {
+		String result = "";
+		for(String attr : attributes.keySet()) {
+			for(String node:attributes.get(attr)) {
+				result =  result+node+","+ attr+System.lineSeparator();
+			}
+		}
+	
+		return result;
+	}
+	
 }
